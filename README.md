@@ -1,6 +1,6 @@
 # AgriVision 🌱
 
-![AgriVision Logo](link-to-your-logo.png)
+![AgriVision Logo](https://github.com/oscode04/AgriVision/blob/main/Logo%20AgriVision.png)
 
 AgriVision is a smart farming solution designed to empower farmers with cutting-edge technology for efficient farming. This application provides many features that are very useful for farmers. These features consist of fertilizer recommendation features, agricultural insights and chatbots that can help farmers in cultivating their agricultural land.
 
