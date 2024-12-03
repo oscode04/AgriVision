@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<font-family xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <!-- Medium -->
+    <font android:fontWeight="500" android:fontStyle="normal" android:font="@font/dmsansmedium" />
+    <font android:fontWeight="500" android:fontStyle="italic" android:font="@font/dmsansmediumitalic" />
+
+    <!-- Bold -->
+    <font android:fontWeight="700" android:fontStyle="normal" android:font="@font/dmsansbold" />
+    <font android:fontWeight="700" android:fontStyle="italic" android:font="@font/dmsansbolditalic" />
+
+</font-family>
