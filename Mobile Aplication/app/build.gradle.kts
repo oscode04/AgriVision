@@ -36,14 +36,16 @@ android {
     }
     buildFeatures {
         viewBinding = true
+        buildConfig = true
     }
 }
 
 dependencies {
-    implementation("com.google.android.gms:play-services-maps:18.2.0")
-    implementation("com.google.android.gms:play-services-location:21.2.0")
-    implementation("androidx.viewpager2:viewpager2:1.0.0")
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.6.0")
+    implementation(libs.androidx.datastore.preferences)
+    implementation(libs.play.services.maps)
+    implementation(libs.play.services.location)
+    implementation(libs.androidx.viewpager2)
+    implementation(libs.kotlinx.coroutines.play.services)
     implementation(libs.glide)
     implementation(libs.retrofit)
     implementation(libs.converter.gson)

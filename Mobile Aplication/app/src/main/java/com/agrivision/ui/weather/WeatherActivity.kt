@@ -8,13 +8,14 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import android.Manifest
+import android.view.View
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.lifecycleScope
 import com.agrivision.R
-import com.agrivision.data.response.RamalanItem
-import com.agrivision.data.response.ResponseCCWeather
-import com.agrivision.data.retrofit.ApiConfig
+import com.agrivision.data.remote.response.RamalanItem
+import com.agrivision.data.remote.response.ResponseCCWeather
+import com.agrivision.data.remote.retrofit.ApiConfig
 import com.agrivision.databinding.ActivityWeatherBinding
 import com.agrivision.utils.fetchCurrentLocation
 import com.agrivision.utils.fetchWeatherForecast
@@ -87,6 +88,7 @@ class WeatherActivity : AppCompatActivity() {
     }
 
     private fun fetchWeatherData(lat: Double, long: Double) {
+        binding.progressBar3.visibility = View.VISIBLE
         lifecycleScope.launch {
             try {
                 val (cityName, ramalanList) = fetchWeatherForecast(lat, long)
@@ -95,6 +97,8 @@ class WeatherActivity : AppCompatActivity() {
             } catch (e: Exception) {
                 Toast.makeText(this@WeatherActivity, "No internet", Toast.LENGTH_SHORT).show()
                 Log.d("fetch weather", "Error: ${e.message}")
+            } finally {
+                binding.progressBar3.visibility = View.GONE
             }
         }
     }

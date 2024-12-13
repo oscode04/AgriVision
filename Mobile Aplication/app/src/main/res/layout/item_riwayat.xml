@@ -14,7 +14,6 @@
         android:layout_height="wrap_content"
         android:padding="16dp">
 
-        <!-- TextView for Date -->
         <TextView
             android:id="@+id/tv_date"
             android:layout_width="0dp"
@@ -29,7 +28,6 @@
             app:layout_constraintEnd_toStartOf="@id/img_fertilizer"
             app:layout_constraintHorizontal_bias="0" />
 
-        <!-- TextView for bullet points and details -->
         <TextView
             android:id="@+id/tv_details"
             android:layout_width="0dp"
@@ -44,7 +42,6 @@
             app:layout_constraintEnd_toStartOf="@id/img_fertilizer"
             app:layout_constraintHorizontal_bias="0" />
 
-        <!-- TextView for fertilizer recommendation -->
         <TextView
             android:id="@+id/tv_recommendation"
             android:layout_width="0dp"
@@ -58,7 +55,6 @@
             app:layout_constraintEnd_toStartOf="@id/img_fertilizer"
             app:layout_constraintHorizontal_bias="0" />
 
-        <!-- ImageView for fertilizer image -->
         <ImageView
             android:id="@+id/img_fertilizer"
             android:layout_width="80dp"

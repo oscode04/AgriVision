@@ -5,9 +5,9 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.agrivision.data.response.ArticleResponse
-import com.agrivision.data.response.ArticleResponseItem
-import com.agrivision.data.retrofit.ApiConfig
+import com.agrivision.data.remote.response.ArticleResponse
+import com.agrivision.data.remote.response.ArticleResponseItem
+import com.agrivision.data.remote.retrofit.ApiConfig
 import kotlinx.coroutines.launch
 
 class DetailViewModel : ViewModel() {
@@ -16,6 +16,9 @@ class DetailViewModel : ViewModel() {
     private val _eventArticleId = MutableLiveData<String>()
     private val _isLoading = MutableLiveData<Boolean>()
     val isLoading: LiveData<Boolean> = _isLoading
+
+    private val _isRetry = MutableLiveData<Boolean>()
+    val isRetry: LiveData<Boolean> = _isRetry
     private val _isSuccess = MutableLiveData<Boolean>()
     val isSuccess: LiveData<Boolean> = _isSuccess
 
@@ -34,24 +37,31 @@ class DetailViewModel : ViewModel() {
     }
 
     fun setArticleDetail(id: String) {
+        _isLoading.value = true
+        _isSuccess.value = false
+        _isRetry.value = false
         viewModelScope.launch {
-            _isLoading.value = true
-            _isSuccess.value = false
+
             try {
                 val response = ApiConfig.getApiService().getArticlesDetail(id)
                 if (response != null) {
                     _detailArticle.value = response.body()
+                    _isRetry.value = false
                     _isSuccess.value = true
                 } else {
                     _isErr.value = "Gagal Fetch Story"
+                    _isRetry.value = true
                     Log.e("Failed getStories", "respons null")
                 }
             } catch (e: Exception) {
-                _isErr.value = "No internet"
+                _isErr.value = "Periksa koneksi internet anda"
+                _isRetry.value = true
                 Log.e("MainViewmodel", "invaldi")
+            } finally {
+                _isLoading.value = false
             }
         }
-        _isLoading.value = false
+
     }
 
     override fun onCleared() {

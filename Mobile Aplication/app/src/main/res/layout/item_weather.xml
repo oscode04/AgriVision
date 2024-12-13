@@ -3,19 +3,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginBottom="8dp"
     android:layout_marginTop="8dp"
-    app:cardElevation="6dp"
-    app:cardCornerRadius="12dp"
-    android:background="?android:attr/colorBackground">
+    android:layout_marginBottom="8dp"
+    android:background="@color/agritextwhite"
+    app:cardCornerRadius="10dp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/agritextwhite"
+        android:backgroundTint="@color/agritextwhite"
         android:orientation="vertical"
         android:padding="24dp">
 
-        <!-- Kota Sebagai Judul -->
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -93,12 +94,6 @@
                 tools:text="12:00" />
         </LinearLayout>
 
-        <!-- Ikon Cuaca -->
-
-        <!-- Tanggal -->
-
-        <!-- Waktu -->
-
         <TextView
             android:id="@+id/tvCity"
             android:layout_width="wrap_content"
@@ -109,13 +104,6 @@
             android:textStyle="bold"
             android:visibility="gone"
             tools:text="Jakarta, ID" />
-
-        <!-- Suhu -->
-
-        <!-- Deskripsi Cuaca -->
-
-        <!-- Kelembaban -->
-
     </LinearLayout>
 
 </androidx.cardview.widget.CardView>

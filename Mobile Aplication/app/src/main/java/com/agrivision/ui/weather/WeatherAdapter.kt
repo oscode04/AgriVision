@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.agrivision.R
-import com.agrivision.data.response.RamalanItem
+import com.agrivision.data.remote.response.RamalanItem
 import com.agrivision.databinding.ItemWeatherBinding
 import java.time.LocalTime
 import java.time.format.DateTimeFormatter

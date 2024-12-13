@@ -7,6 +7,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.agrivision.R
+import com.agrivision.data.companion.Riwayat
 
 class RiwayatAdapter(private val listRiwayat: List<Riwayat>) :
     RecyclerView.Adapter<RiwayatAdapter.RiwayatViewHolder>() {

@@ -5,9 +5,9 @@ import android.content.pm.PackageManager
 import android.location.Location
 import android.os.Build
 import androidx.core.content.ContextCompat
-import com.agrivision.data.response.CuacaItem
-import com.agrivision.data.response.RamalanItem
-import com.agrivision.data.retrofit.ApiConfig
+import com.agrivision.data.remote.response.CuacaItem
+import com.agrivision.data.remote.response.RamalanItem
+import com.agrivision.data.remote.retrofit.ApiConfig
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
 import kotlinx.coroutines.Dispatchers

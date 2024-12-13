@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.agrivision.R
+import com.agrivision.data.companion.Riwayat
 import com.agrivision.databinding.FragmentRiwayatBinding
 
 class RiwayatFragment : Fragment() {

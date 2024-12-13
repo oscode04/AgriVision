@@ -3,11 +3,30 @@
     <string name="title_home">Home</string>
     <string name="title_artikel">Artikel</string>
     <string name="title_riwayat">Riwayat</string>
-    <!-- TODO: Remove or change this placeholder text -->
+    <string name="full_name_hint">Full Name</string>
+    <string name="email_hint">Email</string>
+    <string name="dob_hint">Date of Birth</string>
+    <string name="register">Daftar</string>
+    <string name="back_to_login">Back to Login</string>
+
+
+    <string name="go_to_register">Don\'t have an account? Register here</string>
+    <string name="email_or_username_hint">Masukkan Username atau Email</string>
+
+
+    <string name="email_input_description">Email input field</string>
+    <string name="username_input_description">Username input field</string>
+    <string name="password_input_description">Password input field</string>
+    <string name="nickname_input_description">Nickname input field</string>
+
+    <string name="email_input">Email</string>
+    <string name="username_input">Username</string>
+    <string name="nickname_input">Nickname</string>
+    <string name="password_hint">Masukkan kata sandi</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="label">Kandungan Nitrogen</string>
-    <string name="labelfosfor">Kandungan Fosfor\n</string>
-    <string name="labelkalium">Kandungan Kalium\n</string>
+    <string name="label">Nitrogen</string>
+    <string name="labelfosfor">Fosfor\n</string>
+    <string name="labelkalium">Kalium\n</string>
     <string name="labeltemp">Temperature\n</string>
     <string name="labelkelembapan">Kelembapan</string>
     <string name="labeltanah">Jenis Tanah\n</string>
@@ -42,7 +61,6 @@
         <item>Jeruk</item>
     </string-array>
 
-    <!-- Fix: Correct placement of these arrays outside of a nested <resources> tag -->
     <string-array name="data_name">
         <item>Harley Quinn</item>
     </string-array>
@@ -60,7 +78,7 @@
         Gunakan pupuk ini sesuai dosis yang disarankan untuk menghindari risiko penumpukan Nitrogen yang berlebihan.
     </string>
 
-        <string name="dap_recommendation">
+    <string name="dap_recommendation">
         Rekomendasi Pupuk: DAP\n\n
         Berdasarkan data yang Anda masukkan, kami merekomendasikan pupuk DAP. Pupuk ini memiliki kandungan sekitar 18%% Nitrogen (N) dan 46%% Fosfor (P), sehingga sangat baik untuk pertumbuhan awal tanaman. Rekomendasi ini cocok untuk fase:\n\n
         Nitrogen (N): Mendukung pertumbuhan daun dan batang.\n
@@ -68,7 +86,7 @@
         Gunakan secara merata dan hindari overdosis untuk hasil terbaik.
     </string>
 
-        <string name="R14_35_14_recommendation">
+    <string name="R14_35_14_recommendation">
         Rekomendasi Pupuk: 14-35-14\n\n
         Berdasarkan data yang Anda masukkan, kami merekomendasikan pupuk 14-35-14. Pupuk ini memiliki kandungan 14%% Nitrogen (N), 35%% Fosfor (P), dan 14%% Kalium (K). Rekomendasi ini cocok untuk fase:\n\n
         Nitrogen (N): Mendukung pertumbuhan daun.\n
@@ -77,7 +95,7 @@
         Gunakan sesuai petunjuk pemakaian.
     </string>
 
-        <string name="R28_28_recommendation">
+    <string name="R28_28_recommendation">
         Rekomendasi Pupuk: 28-28\n\n
         Kami merekomendasikan pupuk 28-28 dengan kandungan 28%% Nitrogen (N) dan 28%% Fosfor (P). Cocok untuk fase awal pertumbuhan tanaman.\n\n
         Nitrogen (N): Mendukung pertumbuhan vegetatif.\n
@@ -85,7 +103,7 @@
         Gunakan sesuai dosis untuk hasil optimal.
     </string>
 
-        <string name="R17_17_17_recommendation">
+    <string name="R17_17_17_recommendation">
         Rekomendasi Pupuk: 17-17-17\n\n
         Berdasarkan data, kami merekomendasikan pupuk 17-17-17, yang mengandung 17%% Nitrogen (N), 17%% Fosfor (P), dan 17%% Kalium (K). Rekomendasi ini cocok untuk fase:\n\n
         Nitrogen (N): Pertumbuhan vegetatif.\n
@@ -94,7 +112,7 @@
         Gunakan secara merata sesuai anjuran.
     </string>
 
-        <string name="R20_20_recommendation">
+    <string name="R20_20_recommendation">
         Rekomendasi Pupuk: 20-20\n\n
         Pupuk 20-20 dengan kandungan 20%% Nitrogen (N) dan 20%% Fosfor (P) cocok untuk tanaman di fase pertumbuhan awal.\n\n
         Nitrogen (N): Meningkatkan hijau daun.\n
@@ -102,7 +120,7 @@
         Aplikasikan secara bijak sesuai kebutuhan tanaman.
     </string>
 
-        <string name="R10_26_26_recommendation">
+    <string name="R10_26_26_recommendation">
         Rekomendasi Pupuk: 10-26-26\n\n
         Kami merekomendasikan pupuk 10-26-26 dengan 10%% Nitrogen (N), 26%% Fosfor (P), dan 26%% Kalium (K). Cocok untuk fase pembuahan.\n\n
         Nitrogen (N): Mendukung pertumbuhan vegetatif.\n
@@ -111,21 +129,21 @@
         Gunakan dosis yang sesuai untuk hasil maksimal.
     </string>
 
-        <string name="tsp_recommendation">
+    <string name="tsp_recommendation">
         Rekomendasi Pupuk: TSP\n\n
         Pupuk TSP mengandung sekitar 46%% Fosfor (P), ideal untuk mendukung pembentukan akar yang kuat.\n\n
         Fosfor (P): Membantu pembentukan akar dan bunga.\n
         Gunakan pada tahap awal pertumbuhan tanaman.
     </string>
 
-        <string name="superphosphate_recommendation">
+    <string name="superphosphate_recommendation">
         Rekomendasi Pupuk: Superphosphate\n\n
         Pupuk Superphosphate mengandung sekitar 20%% Fosfor (P). Cocok untuk meningkatkan kekuatan akar dan pembentukan bunga.\n\n
         Fosfor (P): Memperkuat sistem perakaran.\n
         Gunakan sesuai dosis.
     </string>
 
-        <string name="potassium_sulfate_recommendation">
+    <string name="potassium_sulfate_recommendation">
         Rekomendasi Pupuk: Potassium Sulfate\n\n
         Pupuk Potassium Sulfate mengandung 50%% Kalium (K) dan 18%% Sulfur (S). Cocok untuk meningkatkan ketahanan tanaman.\n\n
         Kalium (K): Membantu tanaman lebih tahan terhadap penyakit.\n
@@ -133,14 +151,14 @@
         Gunakan sesuai kebutuhan tanaman.
     </string>
 
-        <string name="potassium_chloride_recommendation">
+    <string name="potassium_chloride_recommendation">
         Rekomendasi Pupuk: Potassium Chloride\n\n
         Pupuk Potassium Chloride mengandung sekitar 60%% Kalium (K). Cocok untuk fase pembuahan.\n\n
         Kalium (K): Mendukung kualitas dan daya simpan buah.\n
         Gunakan secara hati-hati karena kandungan klorida dapat berdampak pada beberapa jenis tanaman.
     </string>
 
-        <string name="R15_15_15_recommendation">
+    <string name="R15_15_15_recommendation">
         Rekomendasi Pupuk: 15-15-15\n\n
         Pupuk 15-15-15 memiliki kandungan 15%% Nitrogen (N), 15%% Fosfor (P), dan 15%% Kalium (K). Cocok untuk fase pertumbuhan secara keseluruhan.\n\n
         Nitrogen (N): Pertumbuhan daun.\n
@@ -149,7 +167,7 @@
         Gunakan secara merata sesuai kebutuhan.
     </string>
 
-        <string name="R10_10_10_recommendation">
+    <string name="R10_10_10_recommendation">
         Rekomendasi Pupuk: 10-10-10\n\n
         Pupuk 10-10-10 mengandung 10%% Nitrogen (N), 10%% Fosfor (P), dan 10%% Kalium (K). Cocok untuk pemeliharaan tanaman.\n\n
         Nitrogen (N): Pertumbuhan vegetatif.\n
@@ -158,7 +176,7 @@
         Aplikasikan dengan bijak sesuai kebutuhan.
     </string>
 
-        <string name="R14_14_14_recommendation">
+    <string name="R14_14_14_recommendation">
     Rekomendasi Pupuk: 14-14-14\n\n
 
         Berdasarkan data yang Anda masukkan, kami merekomendasikan pupuk 14-14-14. Pupuk ini memiliki kandungan 14% Nitrogen (N), 14% Fosfor (P), dan 14% Kalium (K) yang seimbang. Rekomendasi ini cocok untuk meningkatkan pertumbuhan tanaman Anda, terutama pada fase:\n\n
@@ -172,7 +190,15 @@
     <string name="default_recommendation">
     Mohon maaf, kami tidak dapat memberikan rekomendasi pupuk berdasarkan data yang Anda masukkan.
 </string>
-
-
+    <string name="profile_picture">Profile Pict\n</string>
+    <string name="login">Masuk</string>
+    <string name="app_logo">App Logo\n</string>
+    <string name="username_hint">Username\n</string>
+    <string name="nickname_hint">Nama anda\n</string>
+    <string name="email_or_username_input">Username Input\n</string>
+    <string name="password_input">Passw input\n</string>
+    <string name="register_account">Belum punya akun? Daftar\n</string>
+    <string name="register_link_text">Sudah punya akun? Masuk\n</string>
+    <string name="username">username</string>
 
 </resources>

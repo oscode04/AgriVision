@@ -4,9 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.detail.DetailActivity">
+    tools:context=".ui.detail.DetailActivity"
+    android:background="@color/agricolor">
 
-    <!-- ImageView untuk gambar di atas -->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -28,7 +28,6 @@
                 android:layout_height="350dp"
                 android:contentDescription="Gambar Header"
                 android:scaleType="centerCrop"
-                android:src="@drawable/ic_placeholder"
                 app:shapeAppearanceOverlay="@style/RoundedBottomImage" />
 
             <TextView
@@ -40,7 +39,8 @@
                 android:layout_marginEnd="16dp"
                 android:text="Judul Artikel"
                 android:textSize="20sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:textColor="@color/agritextwhite"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -54,19 +54,21 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="18dp"
                     android:text="TextView"
-                    android:textSize="12dp"
-                    android:textStyle="italic" />
+                    android:textSize="12sp"
+                    android:textStyle="italic"
+                    android:textColor="@color/agritextwhite"/>
 
                 <TextView
                     android:id="@+id/tvDate"
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="18dp"
                     android:layout_weight="1"
                     android:text="TextView"
-                    android:textSize="10dp"
-                    android:textStyle="italic" />
+                    android:textSize="10sp"
+                    android:textStyle="italic"
+                    android:textColor="@color/agritextwhite"/>
             </LinearLayout>
 
 
@@ -79,46 +81,11 @@
                 android:layout_marginEnd="16dp"
                 android:lineSpacingExtra="4dp"
                 android:text="Deskripsi lengkap artikel akan ditampilkan di sini."
-                android:textSize="16sp" />
+                android:textSize="16sp"
+                android:textColor="@color/agritextwhite"/>
+
         </LinearLayout>
     </ScrollView>
-
-    <!-- Tombol share -->
-
-    <!-- Tombol favourite atau love -->
-
-    <ImageButton
-        android:id="@+id/btn_share"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_margin="16dp"
-        android:layout_marginTop="176dp"
-        android:layout_marginEnd="32dp"
-        android:background="?attr/selectableItemBackgroundBorderless"
-        android:contentDescription="Bagikan"
-        android:src="@drawable/ic_share"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/img_header"
-        app:tint="@color/white"
-        tools:ignore="TouchTargetSizeCheck" />
-
-    <ImageButton
-        android:id="@+id/btn_favourite"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_margin="16dp"
-        android:layout_marginEnd="8dp"
-        android:background="?attr/selectableItemBackgroundBorderless"
-        android:contentDescription="Favoritkan"
-        android:src="@drawable/ic_favorite_border"
-        app:layout_constraintEnd_toStartOf="@id/btn_share"
-        app:layout_constraintTop_toTopOf="@id/img_header"
-        app:tint="@color/white"
-        tools:ignore="TouchTargetSizeCheck" />
-
-    <!-- TextView untuk judul -->
-
-    <!-- TextView untuk deskripsi -->
 
     <ProgressBar
         android:id="@+id/progressBar"
@@ -126,7 +93,19 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:indeterminateTint="@color/md_theme_primary_highContrast"
-        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_retry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Coba muat ulang"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"

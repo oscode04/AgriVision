@@ -145,4 +145,16 @@
     <color name="white">#FFFFFF</color>
     <color name="grey">#5D5D5D</color>
     <color name="colorAccent">#737373</color>
+    <color name="agricolor">#1D4C43</color>
+    <color name="agritextwhite">#FFFEFE</color>
+    <color name="agritextblack">#1A1A19</color>
+    <color name="transparant">#00FFFFFF</color>
+    <color name="black90">#060606</color>
+    <color name="red">#F60D0D</color>
+    <color name="selected_color">#FFFFFF</color>
+    <color name="unselected_color">#FFFFFF</color>
+    <color name="transparent">#00FFFFFF</color>
+    <color name="btnLogin">#57A773</color>
+    <color name="agrigreen">#0D2F2A</color>
+    <color name="lightbtn">#ECFFF9</color>
 </resources>

@@ -5,6 +5,7 @@ import android.util.Log
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.text.HtmlCompat
@@ -12,8 +13,8 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.lifecycle.ViewModelProvider
 import com.agrivision.R
-import com.agrivision.data.response.ArticleResponse
-import com.agrivision.data.response.ArticleResponseItem
+import com.agrivision.data.remote.response.ArticleResponse
+import com.agrivision.data.remote.response.ArticleResponseItem
 import com.agrivision.databinding.ActivityDetailBinding
 import com.bumptech.glide.Glide
 
@@ -37,13 +38,21 @@ class DetailActivity : AppCompatActivity() {
         detailViewModel.isLoading.observe(this) { isLoading ->
             loading(isLoading)
         }
-//        detailViewModel.isSuccess.observe(this) {
-//            showItem(it)
-//        }
-//        detailViewModel.isErr.observe(this) {
-//            Toast.makeText(this, it, Toast.LENGTH_SHORT).show()
-//        }
+        detailViewModel.isSuccess.observe(this) { isSuccess ->
+            success(isSuccess)
+        }
+        detailViewModel.isRetry.observe(this){
+            retry(it)
+        }
 
+        detailViewModel.isErr.observe(this) {
+            Toast.makeText(this, it, Toast.LENGTH_SHORT).show()
+        }
+        binding.btnRetry.setOnClickListener{
+            if (id != null) {
+                detailViewModel.setArticleDetail(id)
+            }
+        }
         setContentView(binding.root)
 
 
@@ -57,10 +66,6 @@ class DetailActivity : AppCompatActivity() {
         binding.tvTitle.text = article.jsonMember4Title
         binding.tvDate.text=article.jsonMember2Date
         binding.tvAuthor.text = article.jsonMember3Author
-
-//        binding.tvBeginTime.text = events.beginTime
-//        binding.tvRegistrant.text = events.registrants.toString()
-//        binding.tvQuota.text = events.quota.toString()
         binding.tvDescription.text= HtmlCompat.fromHtml(
             article.jsonMember6Content,
             HtmlCompat.FROM_HTML_MODE_LEGACY
@@ -69,12 +74,35 @@ class DetailActivity : AppCompatActivity() {
 
     }
 
-    fun loading(isLoading: Boolean) {
+    private fun loading(isLoading: Boolean) {
         if (isLoading != false) {
             binding.progressBar.visibility = View.VISIBLE
 
         } else {
             binding.progressBar.visibility = View.GONE
+        }
+    }
+    private fun success(isSuccess: Boolean) {
+        if (isSuccess != false) {
+            binding.imgHeader.visibility = View.VISIBLE
+            binding.tvDate .visibility = View.VISIBLE
+            binding.tvTitle .visibility = View.VISIBLE
+            binding.tvAuthor.visibility = View.VISIBLE
+            binding.tvDescription.visibility = View.VISIBLE
+        } else {
+            binding.imgHeader.visibility = View.GONE
+            binding.tvDate.visibility = View.GONE
+            binding.tvTitle.visibility = View.GONE
+            binding.tvAuthor.visibility = View.GONE
+            binding.tvDescription.visibility = View.GONE
+        }
+    }
+    private fun retry(isRetry: Boolean) {
+        if (isRetry != false) {
+            binding.btnRetry.visibility = View.VISIBLE
+
+        } else {
+            binding.btnRetry.visibility = View.GONE
         }
     }
 }

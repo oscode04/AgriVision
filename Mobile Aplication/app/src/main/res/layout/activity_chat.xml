@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.chatbot.ChatActivity"
+    android:background="@color/agrigreen">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="16dp"
+        android:layout_gravity="center"
+        android:text="Tanyakan!"
+        android:textColor="@color/agritextwhite"
+        android:textSize="24sp"
+        android:textStyle="bold"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textFieldChat"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.9"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="10dp"
+            android:hint="Tulis pertanyaan disini"
+            app:boxBackgroundMode="outline"
+            app:boxStrokeWidth="1dp"
+            app:boxStrokeColor="@color/input_stroke_color"
+            android:textColorHint="@color/input_hint_color"
+            app:hintTextColor="@color/input_hint_color"
+            app:cursorColor="@color/agritextwhite"
+            app:boxCornerRadiusTopStart="7dp"
+            app:boxCornerRadiusTopEnd="7dp"
+            app:boxCornerRadiusBottomEnd="7dp"
+            app:boxCornerRadiusBottomStart="7dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/inputTextChat"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="text"
+                android:textColor="@color/agritextwhite"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="0.1"
+            android:background="@drawable/cuaca_background"
+            android:layout_marginEnd="20dp"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:paddingTop="2px"
+            android:paddingBottom="2px">
+
+            <Button
+                android:id="@+id/filledButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/transparant"
+                android:text="Tanya"
+                android:textSize="16sp"
+                android:textColor="@color/agritextblack"
+                />
+        </FrameLayout>
+
+    </LinearLayout>
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/predict_background"
+        android:layout_margin="20dp">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/tvChatResponse"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/agritextwhite"/>
+            </LinearLayout>
+        </ScrollView>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            android:indeterminateTint="@color/agritextwhite"/>
+
+
+    </FrameLayout>
+
+</LinearLayout>
